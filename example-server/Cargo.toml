@@ -1,0 +1,24 @@
+[package]
+name = "example-server"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+publish = false
+
+[dependencies]
+# Local dependencies
+tracing-subscriber-axum = { path = "../tracing-subscriber-axum" }
+
+# Workspace dependencies
+axum.workspace = true
+tokio.workspace = true
+tower.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+
+# Additional dependencies for the example
+uuid = { version = "1", features = ["serde", "v4"] }
+parking_lot = "0.12"

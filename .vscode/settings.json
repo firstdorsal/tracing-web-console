@@ -1,0 +1,24 @@
+{
+    "restoreTerminals.terminals": [
+        {
+            "splitTerminals": [
+                {
+                    "name": "frontend dev server",
+                    "commands": ["cd tracing-subscriber-axum/frontend", "pnpm dev"]
+                }
+            ]
+        },
+        {
+            "splitTerminals": [
+                {
+                    "name": "example server",
+                    "commands": ["cd example-server", "cargo run"]
+                },
+                {
+                    "name": "test load creator",
+                    "commands": ["cd example-server", "bash test_api.sh"]
+                }
+            ]
+        }
+    ]
+}

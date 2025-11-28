@@ -1,0 +1,34 @@
+[package]
+name = "tracing-subscriber-axum"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "A tracing subscriber that provides a web UI for viewing and controlling logs in real-time"
+
+[dependencies]
+# Workspace dependencies
+axum.workspace = true
+tokio.workspace = true
+tower.workspace = true
+tower-http.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+chrono.workspace = true
+include_dir.workspace = true
+futures.workspace = true
+
+# Additional dependencies
+parking_lot = "0.12"
+mime_guess = "2.0"
+futures-util.workspace = true
+tokio-stream.workspace = true
+
+[build-dependencies]
+include_dir.workspace = true
+
+[dev-dependencies]
+tokio-test = "0.4"
