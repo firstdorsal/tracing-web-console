@@ -8,7 +8,7 @@ publish = false
 
 [dependencies]
 # Local dependencies
-tracing-subscriber-axum = { path = "../tracing-subscriber-axum" }
+tracing-web-console = { path = "../tracing-web-console" }
 
 # Workspace dependencies
 axum.workspace = true
@@ -22,3 +22,4 @@ serde_json.workspace = true
 # Additional dependencies for the example
 uuid = { version = "1", features = ["serde", "v4"] }
 parking_lot = "0.12"
+chrono = { version = "0.4", features = ["serde"] }

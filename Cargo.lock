@@ -238,6 +238,7 @@ name = "example-server"
 version = "0.1.0"
 dependencies = [
  "axum",
+ "chrono",
  "parking_lot",
  "serde",
  "serde_json",
@@ -245,7 +246,7 @@ dependencies = [
  "tower 0.4.13",
  "tracing",
  "tracing-subscriber",
- "tracing-subscriber-axum",
+ "tracing-web-console",
  "uuid",
 ]
 
@@ -1166,7 +1167,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "tracing-subscriber-axum"
+name = "tracing-web-console"
 version = "0.1.0"
 dependencies = [
  "axum",

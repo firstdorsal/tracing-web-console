@@ -1,6 +1,6 @@
 [workspace]
 members = [
-    "tracing-subscriber-axum",
+    "tracing-web-console",
     "example-server",
 ]
 resolver = "2"
@@ -9,8 +9,8 @@ resolver = "2"
 version = "0.1.0"
 edition = "2021"
 authors = ["Your Name <your.email@example.com>"]
-license = "MIT OR Apache-2.0"
-repository = "https://github.com/yourusername/tracing-subscriber-axum-frontend"
+license = "AGPL-3.0"
+repository = "https://github.com/firstdorsal/tracing-web-console"
 
 [workspace.dependencies]
 # Async runtime

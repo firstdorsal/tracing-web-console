@@ -1,7 +1,7 @@
 mod modules;
 
 use axum::{routing::get, Router};
-use tracing_subscriber_axum::TracingLayer;
+use tracing_web_console::TracingLayer;
 
 #[tokio::main]
 async fn main() {
@@ -28,9 +28,7 @@ async fn main() {
     println!("  GET  /api/orders");
     println!("  POST /api/orders");
 
-    let listener = tokio::net::TcpListener::bind("0.0.0.0:3000")
-        .await
-        .unwrap();
+    let listener = tokio::net::TcpListener::bind("0.0.0.0:3000").await.unwrap();
 
     axum::serve(listener, app).await.unwrap();
 }

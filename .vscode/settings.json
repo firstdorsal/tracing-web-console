@@ -4,12 +4,16 @@
             "splitTerminals": [
                 {
                     "name": "frontend dev server",
-                    "commands": ["cd tracing-subscriber-axum/frontend", "pnpm dev"]
+                    "commands": ["cd tracing-web-console/frontend", "pnpm dev"]
                 }
             ]
         },
         {
             "splitTerminals": [
+                {
+                    "name": "claude",
+                    "commands": ["claude"]
+                },
                 {
                     "name": "example server",
                     "commands": ["cd example-server", "cargo run"]
