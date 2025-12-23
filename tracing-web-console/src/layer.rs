@@ -78,7 +78,7 @@ impl TracingLayer {
         // Create frontend router with its state
         let frontend_router = Router::new()
             .route("/", get(crate::frontend::serve_index))
-            .route("/assets/*path", get(crate::frontend::serve_static))
+            .route("/assets/{*path}", get(crate::frontend::serve_static))
             .with_state(frontend_state);
 
         // Create the API router

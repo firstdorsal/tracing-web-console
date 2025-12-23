@@ -127,7 +127,7 @@ async fn handle_ws_connection(mut socket: WebSocket, state: Arc<LogsState>) {
                         };
 
                         // Send the JSON message to the client
-                        if socket.send(Message::Text(json)).await.is_err() {
+                        if socket.send(Message::Text(json.into())).await.is_err() {
                             // Client disconnected
                             tracing::debug!("WebSocket client disconnected");
                             break;
@@ -180,7 +180,7 @@ async fn handle_ws_connection(mut socket: WebSocket, state: Arc<LogsState>) {
 
             // Send periodic ping to keep connection alive
             _ = ping_interval.tick() => {
-                if socket.send(Message::Ping(vec![])).await.is_err() {
+                if socket.send(Message::Ping(vec![].into())).await.is_err() {
                     tracing::debug!("Failed to send ping, client disconnected");
                     break;
                 }

@@ -1,14 +1,13 @@
 [workspace]
-members = [
-    "tracing-web-console",
-    "example-server",
-]
+members = ["tracing-web-console", "example-server"]
 resolver = "2"
 
 [workspace.package]
-version = "0.1.0"
+version = "0.2.0"
 edition = "2021"
-authors = ["Your Name <your.email@example.com>"]
+authors = [
+    "Paul Colin Hennig <8d_fvfmaa-o2wf_79aqig6g2ki6-09ffkeqmyo3d@vindelicum.eu>",
+]
 license = "AGPL-3.0"
 repository = "https://github.com/firstdorsal/tracing-web-console"
 
@@ -18,17 +17,17 @@ tokio = { version = "1", features = ["full"] }
 tokio-stream = "0.1"
 
 # Web framework
-axum = { version = "0.7", features = ["ws"] }
-tower = "0.4"
-tower-http = { version = "0.5", features = ["fs", "cors"] }
+axum = { version = "0.8.8", features = ["ws"] }
+tower = "0.5.2"
+tower-http = { version = "0.6.8", features = ["fs", "cors"] }
 
 # Tracing
-tracing = "0.1"
-tracing-subscriber = { version = "0.3", features = ["env-filter", "json"] }
+tracing = "0.1.44"
+tracing-subscriber = { version = "0.3.22", features = ["env-filter", "json"] }
 
 # Serialization
 serde = { version = "1", features = ["derive"] }
-serde_json = "1"
+serde_json = "1.0.146"
 
 # Time
 chrono = { version = "0.4", features = ["serde"] }
