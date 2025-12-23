@@ -115,10 +115,10 @@ impl LogCaptureLayer {
 
 /// Targets to filter out to avoid noise and recursive logging
 const FILTERED_TARGETS: &[&str] = &[
-    "log",                     // log crate compatibility layer
+    "log",                 // log crate compatibility layer
     "tracing_web_console", // our own crate (avoid recursion)
-    "tungstenite",             // WebSocket library internals
-    "tokio_tungstenite",       // async WebSocket library internals
+    "tungstenite",         // WebSocket library internals
+    "tokio_tungstenite",   // async WebSocket library internals
 ];
 
 impl<S> Layer<S> for LogCaptureLayer
